@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>{{message}}</h3>
+	<ul>
+		{% for post in posts %}
+			<li>
+				<a href="/post/{{ post.title }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

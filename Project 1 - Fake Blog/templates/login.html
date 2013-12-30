@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="credentialForm" id="loginForm" action=" {{ url_for('login')}} " method="post">
+	<input type="text" name="username" size="20" placeholder="Username"/><br>
+	<input type="password" name="password" size="20" placeholder="Password"/><br>
+
+	<div class="formButtons">
+		<input type="submit" name="login">
+		<button class="cancel" type="button">Cancel</button>
+        <a href="\recover"><span class="s1">Forgot Your Password?</span></a>
+	</div>
+</form>
+{% endblock %}

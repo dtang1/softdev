@@ -1,0 +1,15 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<form class="changeForm" action=" {{ url_for('change')}} " method="post">
+    <h3>{{message}}</h3>
+    <input type="password" name="oldpassword" size="20" placeholder="Old Password"/><br>
+	<input type="password" name="newpassword" size="20" placeholder="New Password"/><br>
+    <input type="password" name="confirmnewpassword" size="20" placeholder="Retype New Password"/><br>
+
+	<div class="formButtons">
+		<input type="submit" name="login">
+		<button class="cancel" type="button">Cancel</button>
+	</div>
+</form>
+{% endblock %}
+

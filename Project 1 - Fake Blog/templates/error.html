@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% if error %}
+		<p class="error">
+			<br>
+			{% if error == "loginFail" %}
+				Login failed.
+
+			{% elif error == "postFail" %}
+				Post with same title exists.
+
+			{% elif error == "noPost" %}
+				No such post.
+
+			{% elif error == "noUser" %}
+				No such user.
+
+			{% elif error == "mustLogin" %}
+				You must login.	
+
+            {% elif error == "emptyField" %}
+				You must fill in all fields.	
+
+            {% elif error == "securityMismatch" %}
+				Security question and answer do not match.
+
+			{% elif error == "passChangeSuccess" %}
+				Password changed successfully.
+
+			{% elif error == "passMismatch" %}
+				Password mismatch.
+
+			{% elif error == "userExists" %}
+				Username already exists.
+
+			{% endif %}
+		</p>	
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+	<span class="title">{{ post.title }}</span><br>
+	<div class="metadata">
+		by <a href="/user/{{ post.author}}">{{ post.author }}</a>
+		on {{ post.date }}
+	</div>
+    <a href ="/post/{{ post.title }}/delete_post">delete post</a>
+
+
+	<p id="body">
+		{{ post.body }}
+	</p>
+
+	<h3>Comments</h3>
+	<ul>
+		{% for comment in post.comments %}
+			<li class="comment">
+				<p>{{ comment.body }}</p>
+				<div class="metadata">
+					by <a href="/user/{{ comment.author}}">{{ comment.author }}</a>
+					on {{ comment.date }}
+				</div>
+                <a href ="/post/{{ post.title }}/{{ comment.date }}/delete_comment">delete comment</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<form id="commentForm" action="/post/{{ post.title }}/submit_comment" method="post">
+		<textarea name="body" rows="5" cols="70" maxlength="700" placeholder="Enter your comment..."></textarea>
+
+		<div class="formButtons">
+			<input type="submit" name="submit">
+			<button class="cancel">
+				<a href="/">cancel</a>	
+			</button>
+		</div>
+	</form>
+
+{% endblock %}

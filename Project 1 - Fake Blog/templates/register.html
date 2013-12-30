@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="credentialForm" id="registerForm" action=" {{ url_for('register')}} " method="post">
+	<input type="text" name="username" size="20" placeholder="Username"/><br>
+	<input type="password" name="password" size="20" placeholder="Password"/><br>
+	<input type="password" name="passRetype" size="20" placeholder="Retype Password"/><br>
+    <select name = "security">
+      <option value='' disabled selected style='display:none;'>Please Choose</option>
+      <option value="First">Who's your favorite teacher at stuy?</option>
+      <option value="Second">What's your favorite class at stuy</option>
+      <option value="Third">How many pickles can Z eat in one sitting?</option>
+    </select><br>
+    <input type="text" name="answer" size="20" placeholder="Security Answer">
+
+	<div class="formButtons">
+		<input type="submit" name="login">
+		<button class="cancel" type="button">Cancel</button>
+	</div>
+</form>
+{% endblock %}

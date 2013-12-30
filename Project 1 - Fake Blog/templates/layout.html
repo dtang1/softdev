@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Bloginator
+		</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+
+	<body>
+
+		<div id="center">
+
+			<h1>Bloginator</h1>
+
+			<div id="menu">
+				<ul>
+					<li>
+						<a href="/">home</a>
+					</li>
+
+					<li>
+						<a href="/users">users</a>
+					</li>
+
+					{% if "username" in session %}
+						<li>
+						<a href="/submit_post">submit post</a>
+						</li>
+                        <li>
+                            <a href="/change">change password</a>
+                        </li>
+						<li>
+							<a href="/logout">logout</a>
+						</li>
+					{% else %}
+						<li>
+							<a href="/login">login</a>
+						</li>
+
+						<li>
+							<a href="/register">register</a>
+						</li>
+					{% endif %}
+				</ul>
+			</div>
+
+			<div id="content">
+			   {% block content %}
+					<!--content from child templates-->
+			   {% endblock %}
+			</div>
+
+		</div> 
+	</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+	<form id="postForm" action="{{ url_for('submitPost') }}" method="post">
+		Title <input type="text" name="title"><br>
+		<textarea name="body" rows="20" cols="100" maxlength="2000" placeholder="Enter your post..."></textarea>
+
+		<div class="formButtons">
+			<input type="submit" name="submit">
+			<button class="cancel">
+				<a href="/">cancel</a>	
+			</button>
+		</div>
+	</form>
+{% endblock %}

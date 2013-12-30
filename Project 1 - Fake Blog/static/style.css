@@ -1,0 +1,130 @@
+/*
+	Element
+*/
+
+a {
+	text-decoration:none;
+	color:#336699;
+}
+
+a:hover {
+	color:#B80000;
+}
+
+a:visited {
+	color:none;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.title {
+	font-size:1.4em;
+}
+
+button, .formButtons input[type="submit"] {
+		color:white;
+		margin:-2px;
+		background-color:black;
+		border:1px solid black;
+	}
+
+textarea {
+	resize:none;
+	padding:6px;
+	padding-top:8px;
+}
+
+form, .error {
+	z-index:1;
+	position:absolute;
+}
+
+button, .formButtons input[type="submit"] {
+		color:white;
+		margin:-2px;
+		background-color:black;
+		border:1px solid black;
+}
+
+/*
+	ID
+*/
+
+#center {
+	font-family:helvetica;
+	left:18%;
+	position:relative;
+	width:64%;
+}
+
+#center>h1 {
+	border-bottom:2px solid black;
+	font-size:4.5em;
+	letter-spacing:0.1em;
+	margin-bottom:0%;
+	padding:10px;
+	text-align:center;
+}
+
+#content {
+	padding:2%;
+}
+
+#menu, #content {
+	float:left;
+}
+
+#menu {
+	width:18%;
+	height:900px;
+}
+
+#body {
+	text-indent:40px;
+}
+
+#registerForm select {
+	width:174px;
+}
+
+/*
+	Class
+*/
+
+.credentialForm {
+	background-color:white;
+	height:170px;
+	padding-top:45px;
+	position:absolute;
+	text-align:center;
+	width:230px;
+}
+
+.credentialForm > input[type='text'], input[type='password']{
+	border: 1px solid black;
+	padding:2px;
+	margin-bottom:20px;
+}
+
+.credentialForm .formButtons * {
+	width:88px;
+	height:24px;
+}
+
+.comment {
+	background-color:#E6EFFF;
+	margin:4%;
+	padding:4%;
+	width:100%;
+}
+
+.metadata {
+	font-style:italic;
+}
+
+.title {
+	font-size:1.5em;
+	font-weight:bold;
+}

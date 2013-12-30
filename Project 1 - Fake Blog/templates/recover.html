@@ -1,0 +1,22 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<form class="recoverForm" action=" {{ url_for('recover')}} " method="post">
+    <h3>{{message}}</h3>
+	<input type="text" name="username" size="20" placeholder="Username"/><br>
+    <select name = "security">
+      <option value='' disabled selected style='display:none;'>Please Choose</option>
+      <option value="First">Who's your favorite teacher at stuy?</option>
+      <option value="Second">What's your favorite class at stuy</option>
+      <option value="Third">How many pickles can Z eat in one sitting?</option>
+    </select><br>
+    <input type="text" name="answer" size="20" placeholder="Security Answer">
+
+	<div class="formButtons">
+		<input type="submit" name="login">
+		<button class="cancel" type="button">Cancel</button>
+	</div>
+</form>
+{% endblock %}
+
+
+
